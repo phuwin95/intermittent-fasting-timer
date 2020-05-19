@@ -177,9 +177,9 @@ module.exports = {
     }),
     /* eslint-disable camelcase */
     new WebpackPwaManifest({
-      name: 'Hello World',
-      short_name: 'Hello World',
-      description: 'Styled React Boilerplate Demo',
+      name: 'When To Eat',
+      short_name: 'When To Eat',
+      description: 'When To Eat',
       theme_color: '#212121',
       background_color: '#212121',
       icons: [
