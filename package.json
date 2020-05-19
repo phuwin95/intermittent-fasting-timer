@@ -6,7 +6,7 @@
         "start": "NODE_ENV=development webpack-dev-server",
         "build": "NODE_ENV=production webpack",
         "now-build": "npm run build",
-        "test": "xo && stylelint './src/**/*.js' && jest",
+        "test": "eslint && stylelint './src/**/*.js' && jest",
         "test:watch": "jest --watch",
         "test:coverage": "jest --coverage"
     },
@@ -26,9 +26,13 @@
         "babel-plugin-styled-components": "^1.10.7",
         "clean-css-loader": "^2.0.0",
         "css-loader": "^3.5.3",
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb": "^18.1.0",
         "eslint-config-xo-react": "^0.23.0",
-        "eslint-plugin-react": "^7.19.0",
-        "eslint-plugin-react-hooks": "^3.0.0",
+        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-react": "^7.20.0",
+        "eslint-plugin-react-hooks": "^2.5.1",
         "extract-css-chunks-webpack-plugin": "^4.7.4",
         "file-loader": "^6.0.0",
         "friendly-errors-webpack-plugin": "^1.7.0",
@@ -57,29 +61,6 @@
         "react-dom": "0.0.0-experimental-e5d06e34b",
         "styled-components": "^5.1.0"
     },
-    "xo": {
-        "nodeVersion": ">=10",
-        "parser": "babel-eslint",
-        "envs": [
-            "node",
-            "browser",
-            "jest"
-        ],
-        "extends": "xo-react",
-        "settings": {
-            "react": {
-                "version": "16.13"
-            }
-        },
-        "rules": {
-            "import/no-unassigned-import": "off",
-            "import/no-extraneous-dependencies": "off",
-            "unicorn/string-content": "off",
-            "promise/prefer-await-to-then": "off",
-            "no-negated-condition": "off",
-            "node/no-unsupported-features/es-syntax": "off"
-        }
-    },
     "jest": {
         "collectCoverageFrom": [
             "**/*.{js,jsx}",
@@ -88,7 +69,7 @@
             "!**/dist/**",
             "!**/sw.js",
             "!**/index.js"
-          ],
+        ],
         "setupFilesAfterEnv": [
             "@testing-library/jest-dom/extend-expect"
         ]
