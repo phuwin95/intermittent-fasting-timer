@@ -33,7 +33,8 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.8em;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeSpeed;
-    word-wrap: break-word
+    word-wrap: break-word;
+    text-align: center;
   }
 `;
 
@@ -41,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
 const App = () => (
   <Container>
     <Header>
-      Intermitten fasting timer
+      When I can eat?
       <Image />
     </Header>
     <Suspense fallback={<div>Loading...</div>}>

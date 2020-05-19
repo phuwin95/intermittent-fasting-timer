@@ -13,5 +13,5 @@ export const calculateTimer = (whenEaten, fastPeriod) => {
   const canEatMinutes = formatTime(timeCanEat.getMinutes());
   const time = `${canEatHours}:${canEatMinutes}`;
   const result = `${time} ${dayString}`;
-  return result;
+  return { string: result, time, dayString };
 };
