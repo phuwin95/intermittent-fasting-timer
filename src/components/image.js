@@ -4,7 +4,7 @@ import React from 'react';
 import imgSrc from '../../public/favicon.png';
 
 const Image = () => (
-	<img src={imgSrc} alt="⚡" width={20} loading="lazy" decoding="async" draggable={false}/>
+  <img src={imgSrc} alt="⚡" width={20} loading="lazy" decoding="async" draggable={false} />
 );
 
 export default Image;

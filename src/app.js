@@ -7,11 +7,11 @@ import woff2 from '../public/fonts/open-sans-v16-latin-regular.woff2';
 import woff from '../public/fonts/open-sans-v16-latin-regular.woff';
 
 // Import Components
-import Container from './components/container';
-import Header from './components/header';
-import Image from './components/image';
+import Container from './components/Container';
+import Header from './components/Header';
+import Image from './components/Image';
 
-const Timer = React.lazy(() => import('./components/timer'));
+const Timer = React.lazy(() => import('./components/Timer'));
 
 // Global Style
 const GlobalStyle = createGlobalStyle`
@@ -41,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
 const App = () => (
   <Container>
     <Header>
-      Hello World
+      Intermitten fasting timer
       <Image />
     </Header>
     <Suspense fallback={<div>Loading...</div>}>
